@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "types": [
+      "vite/client",
+      "vite-plugin-pwa/client"
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "vite.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/features/wallet/screens/AddAccountScreen.tsx",
+    "src/features/wallet/components/account/AccountForm.tsx",
+    "src/features/budget/screens/AddBudgetScreen.tsx",
+    "src/features/budget/components/BudgetForm.tsx",
+    "src/features/goals/screens/AddGoalScreen.tsx",
+    "src/features/goals/components/form/GoalForm.tsx",
+    "src/features/settings/screens/CustomBankFormScreen.tsx",
+    "src/features/settings/screens/CustomCategoryFormScreen.tsx"
+  ]
+}

@@ -1,0 +1,139 @@
+@import "tailwindcss";
+:root {
+  color-scheme: light;
+  /* Light Theme - Kio Vantage Light Precise */
+  --app-background: #F2F2F7;
+  --on-background: #1C1C1E;
+  --surface-card: #FFFFFF;
+  --surface-raised: #EDEAF5;
+  --surface-input: #F2F2F7;
+  --on-surface-card-title: #1C1C1E;
+  --on-surface-card-body: #3C3C43;
+  --on-surface-card-secondary: #636370;
+  --surface-navbar: #FFFFFFE6;
+  --on-surface-navbar-active: #6D28D9;
+  --on-surface-navbar-inactive: #C7C7CC;
+  --border-subtle: #E5E5EA;
+
+  --brand-primary: #6D28D9;
+  --text-on-brand: #FFFFFF;
+
+  --status-health-high: #3B6D11; /* Verde oscuro del badge */
+  --status-health-low: #A32D2D; /* Rojo oscuro */
+  --status-badge-text: #3B6D11;
+  --status-health-bar-bg: #EAF3DE; /* Fondo de badge */
+
+  --shadow-card-soft: 0 10px 15px -3px rgba(28, 28, 30, 0.05);
+}
+
+.dark {
+  color-scheme: dark;
+  /* Charcoal surfaces with a subtle violet undertone and purple accents. */
+  --app-background: #25242A;
+  --on-background: #F5F5F5;
+  --surface-card: #302E36;
+  --surface-raised: #3C3943;
+  --surface-input: #2B2931;
+  --on-surface-card-title: #F5F5F5;
+  
+  /* HeroUI Overrides to prevent black flashes */
+  --heroui-background: 250.0 7.7% 15.3%;
+  --heroui-content1: 255.0 8.0% 19.6%;
+  --heroui-content2: 258.0 8.1% 24.3%;
+  --heroui-primary: 263 70% 50%;
+  --on-surface-card-body: #DEDEDE;
+  --on-surface-card-secondary: #B0B0B0;
+  --surface-navbar: #2B2931;
+  --on-surface-navbar-active: #C4B5FD;
+  --on-surface-navbar-inactive: #A3A3A3;
+  --border-subtle: #4B4654;
+
+  --brand-primary: #6D28D9;
+  --text-on-brand: #F5F5F5;
+
+  --status-health-high: #4CD964;
+  --status-health-low: #FF3B30;
+  --status-badge-text: #4CD964;
+  --status-health-bar-bg: #2C352D;
+
+  --shadow-card-soft: 0 10px 15px -3px rgba(0, 0, 0, 0.22);
+}
+
+@theme inline {
+  --color-foreground: var(--on-background);
+  --color-background: var(--app-background);
+  --color-default-50: var(--surface-input);
+  --color-default-100: var(--surface-raised);
+  --color-default-200: var(--border-subtle);
+  --color-default-300: var(--on-surface-card-secondary);
+  --color-default-400: var(--on-surface-card-secondary);
+  --color-default-500: var(--on-surface-card-secondary);
+  --color-default-600: var(--on-surface-card-body);
+  --color-default-700: var(--on-surface-card-title);
+  --color-default-800: var(--on-background);
+  --color-default-900: var(--on-background);
+  --color-app-background: var(--app-background);
+  --color-on-background: var(--on-background);
+
+  --color-surface-card: var(--surface-card);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-input: var(--surface-input);
+  --color-on-surface-card-title: var(--on-surface-card-title);
+  --color-on-surface-card-body: var(--on-surface-card-body);
+  --color-on-surface-card-secondary: var(--on-surface-card-secondary);
+
+  --color-surface-navbar: var(--surface-navbar);
+  --color-on-surface-navbar-active: var(--on-surface-navbar-active);
+  --color-on-surface-navbar-inactive: var(--on-surface-navbar-inactive);
+
+  --color-border-subtle: var(--border-subtle);
+
+  --color-brand-primary: var(--brand-primary);
+  --color-text-on-brand: var(--text-on-brand);
+
+
+
+  --color-status-health-high: var(--status-health-high);
+  --color-status-health-low: var(--status-health-low);
+  --color-status-badge-text: var(--status-badge-text);
+  --color-status-health-bar-bg: var(--status-health-bar-bg);
+
+  --shadow-card-soft: var(--shadow-card-soft);
+
+  --radius-card: 16px;
+  --radius-button: 16px;
+  --border-thin: 1px;
+
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-geist-mono);
+
+  /* Kyo Vantage Dark Mode Colors */
+  --color-kyo-dark: #25242A;
+  --color-kyo-card: #302E36;
+  --color-kyo-purple: #6d28d9;
+  --color-kyo-lightPurple: #8b5cf6;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  background: var(--app-background) !important;
+  color: var(--on-background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  background: var(--app-background) !important;
+}
+
+/* Utilities */
+.hide-scrollbar {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari and Opera */
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent !important;
+  -webkit-appearance: none !important;
+}
